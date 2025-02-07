@@ -1,0 +1,22 @@
+- name: Install and Secure MySQL
+  hosts: all
+  become: true
+  tasks:
+    - name: Install MySQL
+      apt:
+        name: mysql-server
+        state: present
+
+    - name: Start and Enable MySQL
+      service:
+        name: mysql
+        state: started
+        enabled: true
+
+    - name: Set MySQL root password
+      mysql_user:
+        name: root
+        password: "StrongPass123"
+        priv: "*.*:ALL,GRANT"
+        host: localhost
+        state: present

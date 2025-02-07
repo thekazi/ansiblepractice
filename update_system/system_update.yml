@@ -1,0 +1,12 @@
+- name: Update System and Cleanup
+  hosts: all
+  become: true
+  tasks:
+    - name: Update all packages
+      apt:
+        update_cache: yes
+        upgrade: dist
+
+    - name: Remove unnecessary packages
+      apt:
+        autoremove: yes

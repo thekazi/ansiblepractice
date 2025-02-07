@@ -1,0 +1,22 @@
+- name: Install Docker and Run Nginx Container
+  hosts: all
+  become: true
+  tasks:
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Start Docker Service
+      service:
+        name: docker
+        state: started
+        enabled: true
+
+    - name: Run Nginx Container
+      docker_container:
+        name: nginx_container
+        image: nginx
+        state: started
+        ports:
+          - "8080:80"
