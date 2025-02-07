@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# ansiblepractice
+
 =======
 # Ansible Mini Projects
 
@@ -12,4 +11,4 @@ This repository contains small Ansible automation projects:
 5. **System Updates** (`system_update/`)
 
 Each project has an Ansible playbook that automates a common DevOps task.
->>>>>>> 5f9058f (Initial Commit)
+
