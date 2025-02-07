@@ -3,7 +3,7 @@
 
 This repository contains small Ansible automation projects:
 
-1. **Web Server Setup** (`setup_webserver/`)
+1. **Web Server Setup** (`webserver/`)
 2. **User Management** (`create_users/`)
 3. **MySQL Installation** (`setup_mysql/`)
 4. **Docker Deployment** (`deploy_docker/`)
